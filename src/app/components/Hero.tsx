@@ -1,4 +1,4 @@
-"use client"; // Mark this as a Client Component
+"use client";
 
 import React, { useEffect, useMemo } from 'react';
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';

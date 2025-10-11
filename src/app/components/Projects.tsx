@@ -1,3 +1,5 @@
+"use client";
+
 import { projects } from '@/contents/project'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -19,10 +21,6 @@ const Projects = () => {
                             fill 
                             className='object-cover'
                             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' 
-                            onError={(e) => {
-                                const target = e.target as HTMLImageElement;
-                                target.src = '/placeholder-image.jpg'; // Add a placeholder image
-                            }}
                         />
                     </div>
                     <h3 className='text-xl font-semibold mb-2'>{project.title}</h3>
