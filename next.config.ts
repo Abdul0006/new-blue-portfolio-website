@@ -1,8 +1,8 @@
 // next.config.js
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live https://*.vercel.app https://www.google-analytics.com https://www.googletagmanager.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://vercel.live https://*.vercel.app https://www.google-analytics.com https://www.googletagmanager.com 'wasm-unsafe-eval';
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.googleapis.com;
   img-src 'self' blob: data: https: https://www.google-analytics.com https://www.googletagmanager.com;
   font-src 'self' https://fonts.gstatic.com;
   connect-src 'self' https://api.resend.com https://*.vercel.app https://fonts.googleapis.com;
