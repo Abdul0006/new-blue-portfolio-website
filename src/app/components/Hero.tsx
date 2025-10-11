@@ -1,36 +1,36 @@
 "use client"; // Mark this as a Client Component
 
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import { TypeAnimation } from 'react-type-animation';
 import { motion, Variants } from 'framer-motion';
 
-// Helper function for animations with TypeScript types
-const fadeIn = (
-  direction: 'up' | 'down' | 'left' | 'right' = 'up',
-  delay: number = 0
-): Variants => ({
-  hidden: {
-    opacity: 0,
-    y: direction === 'up' ? 40 : direction === 'down' ? -40 : 0,
-    x: direction === 'left' ? 40 : direction === 'right' ? -40 : 0,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    x: 0,
-    transition: {
-      type: 'tween',
-      duration: 1.2,
-      delay: delay,
-      ease: [0.25, 0.25, 0.25, 0.75],
-    },
-  },
-});
-
 const Hero: React.FC = () => {
+  // Memoize the animation variants to prevent unnecessary re-renders
+  const fadeIn = useMemo(() => (
+    direction: 'up' | 'down' | 'left' | 'right' = 'up',
+    delay: number = 0
+  ): Variants => ({
+    hidden: {
+      opacity: 0,
+      y: direction === 'up' ? 40 : direction === 'down' ? -40 : 0,
+      x: direction === 'left' ? 40 : direction === 'right' ? -40 : 0,
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      x: 0,
+      transition: {
+        type: 'tween',
+        duration: 1.2,
+        delay: delay,
+        ease: [0.25, 0.25, 0.25, 0.75],
+      },
+    },
+  }), []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
       {/* Dotted Grid Background */}
@@ -89,13 +89,13 @@ const Hero: React.FC = () => {
           </div>
 
           <div className="flex justify-center lg:justify-start space-x-6">
-            <Link href="#" target="_blank" className="text-3xl text-gray-500 dark:text-gray-400 hover:text-primary transition-transform transform hover:scale-125 duration-300">
+            <Link href="https://github.com/yourusername" target="_blank" className="text-3xl text-gray-500 dark:text-gray-400 hover:text-primary transition-transform transform hover:scale-125 duration-300" aria-label="GitHub">
               <FaGithub />
             </Link>
-            <Link href="#" target="_blank" className="text-3xl text-gray-500 dark:text-gray-400 hover:text-primary transition-transform transform hover:scale-125 duration-300">
+            <Link href="https://linkedin.com/in/yourusername" target="_blank" className="text-3xl text-gray-500 dark:text-gray-400 hover:text-primary transition-transform transform hover:scale-125 duration-300" aria-label="LinkedIn">
               <FaLinkedin />
             </Link>
-            <Link href="#" target="_blank" className="text-3xl text-gray-500 dark:text-gray-400 hover:text-primary transition-transform transform hover:scale-125 duration-300">
+            <Link href="https://facebook.com/yourusername" target="_blank" className="text-3xl text-gray-500 dark:text-gray-400 hover:text-primary transition-transform transform hover:scale-125 duration-300" aria-label="Facebook">
               <FaFacebook />
             </Link>
           </div>

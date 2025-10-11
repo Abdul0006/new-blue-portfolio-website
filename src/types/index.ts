@@ -2,8 +2,8 @@ export interface Project {
     title: string;
     description: string
     technologies: string[];
-    githubLink: string;
-    demoLink: string;
+    githubLink?: string; // Make optional
+    demoLink?: string; // Make optional
     image: string;
 }
 
