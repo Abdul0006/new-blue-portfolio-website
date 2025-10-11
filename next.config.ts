@@ -1,5 +1,5 @@
 // next.config.ts
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
 
 // const securityHeaders = [
 //   {
@@ -38,15 +38,15 @@ import type { NextConfig } from "next";
 //   },
 // ];
 
-const nextConfig: NextConfig = {
-  async headers() {
-    return [
-      {
-        source: "/(.*)", // apply to all routes
-        headers: securityHeaders,
-      },
-    ];
-  },
-};
+// const nextConfig: NextConfig = {
+//   async headers() {
+//     return [
+//       {
+//         source: "/(.*)", // apply to all routes
+//         headers: securityHeaders,
+//       },
+//     ];
+//   },
+// };
 
-export default nextConfig;
+// export default nextConfig;
