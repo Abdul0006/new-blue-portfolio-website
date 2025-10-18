@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "functions": {
+    "src/app/api/send/route.ts": {
+      "includeFiles": "node_modules/**/*"
+    }
+  },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ]
+}
