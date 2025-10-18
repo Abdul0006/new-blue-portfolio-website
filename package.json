@@ -1,14 +1,29 @@
 {
-  "name": "porftolio",
-  "version": "0.1.0",
+  "name": "techai-pk",
+  "version": "1.0.0",
   "private": true,
+  "description": "Personal portfolio of Abdul Wahab - AI Engineer, Developer & Marketer",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint --fix \"{src,app}/**/*.{js,jsx,ts,tsx}\""
+    "lint:fix": "eslint --fix \"{src,app}/**/*.{js,jsx,ts,tsx}\"",
+    "type-check": "tsc --noEmit",
+    "prettier": "prettier --write \"{src,app}/**/*.{js,jsx,ts,tsx,css,md}\"",
+    "prettier:check": "prettier --check \"{src,app}/**/*.{js,jsx,ts,tsx,css,md}\""
   },
+  "keywords": [
+    "nextjs",
+    "typescript",
+    "portfolio",
+    "ai-engineer",
+    "react",
+    "tailwindcss",
+    "vercel"
+  ],
+  "author": "Abdul Wahab",
+  "license": "MIT",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@supabase/supabase-js": "^2.49.9",
@@ -28,6 +43,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

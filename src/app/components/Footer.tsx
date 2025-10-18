@@ -8,8 +8,8 @@ const Footer = () => {
         <div className='container mx-w-7xl px-4 py-8 mx-auto'>
             <div className='flex flex-col md:flex-row justify-between items-center'>
                 <div className='mb-4 md:mb-0'>
-                    <Link href='/' className='text-xl font-bold text-primary '>techAI&trade;</Link>
-                    <p className='text-sm text-secondary mt-2 '> {new Date().getFullYear()} techAI all rights reserved.</p>
+                    <Link href='/' className='text-xl font-bold text-primary '>TechAI.pk</Link>
+                    <p className='text-sm text-secondary mt-2 '> {new Date().getFullYear()} TechAI.pk all rights reserved.</p>
 
                 </div>
                 <div className='flex space-x-4 mb-8'>

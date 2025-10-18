@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { FaGithub, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,27 +9,26 @@ import { motion, Variants } from 'framer-motion';
 
 const Hero: React.FC = () => {
   // Memoize the animation variants to prevent unnecessary re-renders
-  const fadeIn = useMemo(() => (
-    direction: 'up' | 'down' | 'left' | 'right' = 'up',
-    delay: number = 0
-  ): Variants => ({
-    hidden: {
-      opacity: 0,
-      y: direction === 'up' ? 40 : direction === 'down' ? -40 : 0,
-      x: direction === 'left' ? 40 : direction === 'right' ? -40 : 0,
-    },
-    show: {
-      opacity: 1,
-      y: 0,
-      x: 0,
-      transition: {
-        type: 'tween',
-        duration: 1.2,
-        delay: delay,
-        ease: [0.25, 0.25, 0.25, 0.75],
+  const fadeIn = useMemo(() => {
+    return (direction: 'up' | 'down' | 'left' | 'right' = 'up', delay: number = 0): Variants => ({
+      hidden: {
+        opacity: 0,
+        y: direction === 'up' ? 40 : direction === 'down' ? -40 : 0,
+        x: direction === 'left' ? 40 : direction === 'right' ? -40 : 0,
       },
-    },
-  }), []);
+      show: {
+        opacity: 1,
+        y: 0,
+        x: 0,
+        transition: {
+          type: 'tween',
+          duration: 1.2,
+          delay: delay,
+          ease: [0.25, 0.25, 0.25, 0.75],
+        },
+      },
+    });
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">

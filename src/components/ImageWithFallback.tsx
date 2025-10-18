@@ -8,6 +8,7 @@ export default function ImageWithFallback(props: ImageProps) {
                 const target = e.target as HTMLImageElement;
                 target.src = props.alt || '/placeholder-image.jpg';
             }}
+            alt={props.alt || ''}
         />
     );
 }

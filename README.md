@@ -1,44 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TechAI.pk - Personal Portfolio
+
+This is the personal portfolio website for Abdul Wahab - AI Engineer, Developer & Marketer. Built with Next.js, TypeScript, Tailwind CSS, and deployed on Vercel.
+
+## Features
+
+- Responsive design with mobile-first approach
+- Dark/Light theme toggle with system preference detection
+- SEO optimized with proper metadata and OpenGraph tags
+- Form handling with Resend integration
+- Supabase integration for backend services
+- Animations and transitions with Framer Motion
+- TypeScript type safety throughout
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (with Turbopack in development)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4 with PostCSS
+- **Icons**: Heroicons and React Icons
+- **Animations**: Framer Motion
+- **Backend**: Supabase (database/auth)
+- **Email**: Resend (for contact forms)
+- **Font**: Google Fonts (Geist)
 
 ## Getting Started
 
 First, run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
+
+Create a `.env.local` file in the root directory and add the following environment variables:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+RESEND_API_KEY=your_resend_api_key
+```
+
+## Deployment
+
+This application is designed to be deployed on Vercel. The `next.config.ts` file includes security headers appropriate for Vercel deployment.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this project:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Tailwind CSS](https://tailwindcss.com/docs) - rapidly build modern websites
+- [Supabase](https://supabase.com/docs) - open source Firebase alternative
+- [Framer Motion](https://www.framer.com/motion/) - production-ready motion library for React
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-
-
-API Anon Kye:
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InViand1Y2Jhdnp1ZWh0enhwbnpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDg5ODQwNDcsImV4cCI6MjA2NDU2MDA0N30.9fs-0Le-4PZHiWYevOf1nMooFS4e5liKk8GP9IpC9KY
-
-project Key:
-ubjwucbavzuehtzxpnzp
+Contributions are welcome! Please feel free to submit a Pull Request.
